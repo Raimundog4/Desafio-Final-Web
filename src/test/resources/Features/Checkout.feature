@@ -1,14 +1,15 @@
 #language: pt
+#enconding: UTF-8
 @Checkout @End2End
 Funcionalidade: Checkout
 
   Contexto: 
     Dado que o usuario esteja na tela principal do sitema
     E que esteja logado no sistema
-    E que esteja na pagina do carrinho com o produto "<produto>" adicionado
 
   @RealizarCheckout @SmokeTest
   Esquema do Cenario: Realizar Checkout com sucesso
+    Dado que esteja na pagina do carrinho com o produto "<produto>" adicionado
     Quando clicar no botao Checkout
     E preencher o campo First Name como "<nome>"
     E preencher o campo Last Name como "<sobrenome>"

@@ -43,12 +43,12 @@ public class CheckoutPage {
 	
 	public void preencherCampoNome(String nome) {
 		esperarElemento(campoNome);
-		campoCep.sendKeys(nome);
+		campoNome.sendKeys(nome);
 	}
 	
 	public void preencherCampoSobrenome(String sobrenome) {
 		esperarElemento(campoSobrenome);
-		campoCep.sendKeys(sobrenome);
+		campoSobrenome.sendKeys(sobrenome);
 	}
 	
 	public void preencherCampoCep(String cep) {

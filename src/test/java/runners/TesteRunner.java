@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 				snippets = SnippetType.CAMELCASE,
 				plugin = {"pretty", "html:target/cucumber-reports"}, 
 				monochrome = true,
-				dryRun = true
+				dryRun = false
 				)
 public class TesteRunner {
 
