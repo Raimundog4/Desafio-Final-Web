@@ -9,10 +9,11 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "classpath:Features",
 				glue = {"stepdefinitions"},
-				tags = {"@Login"},
+				tags = {"@Carrinho"},
 				snippets = SnippetType.CAMELCASE,
 				plugin = {"pretty", "html:target/cucumber-reports"}, 
-				monochrome = true
+				monochrome = true,
+				dryRun = false
 				)
 public class TesteRunner {
 

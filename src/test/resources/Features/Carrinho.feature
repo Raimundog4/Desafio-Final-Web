@@ -6,6 +6,7 @@ Funcionalidade: Carrinho
     Dado que o usuario esteja na tela principal do sitema
     E que esteja logado no sistema
 
+  @AdicionarProdutos @SmokeTest
   Esquema do Cenario: Adicionar Produtos com sucesso
     Quando clicar no botao Add To Cart do produto "<produto>"
     E clicar no botao do carrinho

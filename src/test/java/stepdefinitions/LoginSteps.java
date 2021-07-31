@@ -17,6 +17,14 @@ public class LoginSteps {
 	driver = Hooks.driver;
 	}
 
+	@Dado("^que esteja logado no sistema$")
+	public void queEstejaLogadoNoSistema() throws Exception {
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.preencerCampoUsuario("standard_user");
+		loginPage.preencerCampoSenha("secret_sauce");
+		loginPage.acionarBotaoLogin();
+	}
+	
 	@Quando("^informar o campo Username como \"([^\"]*)\"$")
 	public void informarOCampoUsernameComo(String arg1) throws Exception {
 		LoginPage loginPage = new LoginPage(driver);
