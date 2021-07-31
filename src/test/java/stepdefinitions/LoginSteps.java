@@ -38,6 +38,7 @@ public class LoginSteps {
 	@Entao("^o sistema ira apresentar a tela de produtos$")
 	public void oSistemaIraApresentarATelaDeProdutos() throws Exception {
 		LoginPage loginPage = new LoginPage(driver);
+		//Verifica se estão aparecendo os produtos
 		loginPage.validarPaginaProdutos();
 	}
 
