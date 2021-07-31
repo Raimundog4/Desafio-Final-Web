@@ -1,11 +1,22 @@
 package stepdefinitions;
 
+import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 import pageobjects.CheckoutPage;
 
 public class CheckoutSteps {
 
+	@Dado("^tenha realizado o Checkout$")
+	public void tenhaRealizadoOCheckout() throws Throwable {
+		CheckoutPage checkoutPage = new CheckoutPage(Hooks.driver);
+		checkoutPage.clicarBotaoCheckout();
+		checkoutPage.preencherCampoNome("Lorenzo");
+		checkoutPage.preencherCampoSobrenome("Silva");
+		checkoutPage.preencherCampoCep("48020-202");
+		checkoutPage.clicarBotaoContinue();
+	}
+	
 	@Quando("^clicar no botao Checkout$")
 	public void clicarNoBotaoCheckout() throws Exception {
 		CheckoutPage checkoutPage = new CheckoutPage(Hooks.driver);
@@ -30,14 +41,14 @@ public class CheckoutSteps {
 		checkoutPage.preencherCampoCep(arg1);
 	}
 
-	@Quando("^clicar no cotao Continue$")
-	public void clicarNoCotaoContinue() throws Exception {
+	@Quando("^clicar no botao Continue$")
+	public void clicarNoBotaoContinue() throws Exception {
 		CheckoutPage checkoutPage = new CheckoutPage(Hooks.driver);
 		checkoutPage.clicarBotaoContinue();
 	}
 
-	@Entao("^o sistema devera apresentar a pagnia com a descricao da compra$")
-	public void oSistemaDeveraApresentarAPagniaComADescricaoDaCompra() throws Exception {
+	@Entao("^o sistema devera apresentar a pagina com a descricao da compra$")
+	public void oSistemaDeveraApresentarAPaginaComADescricaoDaCompra() throws Exception {
 		CheckoutPage checkoutPage = new CheckoutPage(Hooks.driver);
 		checkoutPage.validarCheckout();
 	}

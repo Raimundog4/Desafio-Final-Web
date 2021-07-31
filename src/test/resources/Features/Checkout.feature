@@ -14,8 +14,8 @@ Funcionalidade: Checkout
     E preencher o campo First Name como "<nome>"
     E preencher o campo Last Name como "<sobrenome>"
     E preencher o campo Zip/Postal Code como "<cep>"
-    E clicar no cotao Continue
-    Entao o sistema devera apresentar a pagnia com a descricao da compra
+    E clicar no botao Continue
+    Entao o sistema devera apresentar a pagina com a descricao da compra
 
     Exemplos: 
       | produto             | nome     | sobrenome | cep      |

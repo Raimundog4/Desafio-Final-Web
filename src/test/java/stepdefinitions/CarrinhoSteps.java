@@ -22,6 +22,13 @@ public class CarrinhoSteps {
 		carrinhoPage.adicionarProdutoCarrinho(arg1);
 		carrinhoPage.clicarBotaoCarrinho();
 	}
+	
+	@Dado("^que o usuario tenha adicionado o produto \"([^\"]*)\" ao carrinho$")
+	public void queOUsuarioTenhaAdicionadoOProdutoAoCarrinho(String arg1) throws Throwable {
+		CarrinhoPage carrinhoPage = new CarrinhoPage(Hooks.driver);
+		carrinhoPage.adicionarProdutoCarrinho(arg1);
+		carrinhoPage.clicarBotaoCarrinho();
+	}
 
 	@Quando("^clicar no botao do carrinho$")
 	public void clicarNoBotaoDoCarrinho() throws Throwable {
