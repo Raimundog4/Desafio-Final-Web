@@ -7,11 +7,13 @@ import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-		features = "classpath:Features",
-		glue = {"stepdefinitions"},
-		snippets = SnippetType.CAMELCASE
-		)
+@CucumberOptions(features = "classpath:Features",
+				glue = {"stepdefinitions"},
+				tags = {"@Login"},
+				snippets = SnippetType.CAMELCASE,
+				plugin = {"pretty", "html:target/cucumber-reports"}, 
+				monochrome = true
+				)
 public class TesteRunner {
 
 }
